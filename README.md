@@ -147,3 +147,35 @@ HTTP/1.1 204 No Content
      ```
 
 A API estará disponível em `http://localhost:3000`.
+<br>
+<hr>
+
+## IMPORTANTE: 
+Caso não deseje usar Postman/Insomnia, pode testar os comandos diretamente no terminal com o 'curl'. Basta adaptar os exemplos abaixo!
+
+   ### 1. Criar primeiro produto
+    curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d '{"name": "Notebook", "price": 2500}'
+    
+   ### 2. Criar segundo produto
+    curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d '{"name": "Mouse", "price": 50}'
+    
+   ### 3. Listar todos os produtos
+    curl http://localhost:3000/api/products
+    
+   ### 4. Buscar produto específico (ID 1)
+    curl http://localhost:3000/api/products/1
+    
+   ### 5. Atualizar produto (ID 1)
+    curl -X PUT http://localhost:3000/api/products/1 -H "Content-Type: application/json" -d '{"name": "Notebook Dell", "price": 3000}'
+    
+   ### 6. Verificar atualização
+    curl http://localhost:3000/api/products/1
+    
+   ### 7. Excluir produto (ID 2)
+    curl -X DELETE http://localhost:3000/api/products/2
+    
+   ### 8. Listar novamente para confirmar exclusão
+    curl http://localhost:3000/api/products
+<hr>
+
+**Autor**: Sander Gustavo Piva
